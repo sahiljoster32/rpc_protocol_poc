@@ -1,0 +1,10 @@
+1. Setup multiple consumers single producer.
+    1.1. Celey is used to add tasks in queue.
+    1.2. only specific tasks should be executed by consumer1 and same goes for consumer2.
+    1.3. proucer can add tasks inside queues for both consumer.
+    1.4. everything should be working with docker enviroment.
+2. Setup all logs inside a file. (All logs should be written into a single file)
+    2.1. Can save all logs inside a centeral PV.
+    2.2. Std out is ok but can we store error in much more descriptive way ? like adding timestamp, ip, user name & extras.
+3. K8s pai deploy karne ke bare mai sochna.
+4. SSH the logs server.

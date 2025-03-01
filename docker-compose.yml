@@ -1,0 +1,27 @@
+services:
+  redis:
+    build: ./redis
+    ports:
+      - "6379:6379"
+  consumer1:
+    build: ./consumer1
+    volumes:
+      - ./logs:/consumer1/logs
+    depends_on:
+      - redis
+  consumer2:
+    build: ./consumer2
+    volumes:
+      - ./logs:/consumer2/logs
+    depends_on:
+      - redis
+  producer:
+    build: ./producer
+    volumes:
+      - ./logs:/producer/logs
+    depends_on:
+      - redis
+      - consumer1
+      - consumer2
+    ports:
+      - "8080:8080"

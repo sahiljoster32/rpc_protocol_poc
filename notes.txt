@@ -1,0 +1,14 @@
+1. add is defined in consumer 1, multiply is defined in consumer2.
+- then it depends on queue setup if default is used then both consumer will listen to same queue and throw error for tasks which are not defined inside them.
+
+2. What if both of them conatines same same task, like consumer1 and consumer2 both contain add adn multiply task.
+- no error will be thrown.
+
+3. What is the role for queue.?
+- routing the tasks.
+
+4. How logging worked?
+- Capeturing the std_out and std_err inside different log files. Every module should be like module_out.log &. module_err.log
+
+5. How to define a central Persistent volume (PV) so that different containers can access it at the same time?
+- for pv first we need generate logs insides a log folder. then mount it with pv.
