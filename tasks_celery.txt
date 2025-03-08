@@ -1,4 +1,4 @@
-1. Setup multiple consumers single producer.
+1. Setup multiple consumers single producer. (Done)
     1.1. Celey is used to add tasks in queue.
     1.2. only specific tasks should be executed by consumer1 and same goes for consumer2.
     1.3. proucer can add tasks inside queues for both consumer.
@@ -6,5 +6,11 @@
 2. Setup all logs inside a file. (All logs should be written into a single file)
     2.1. Can save all logs inside a centeral PV.
     2.2. Std out is ok but can we store error in much more descriptive way ? like adding timestamp, ip, user name & extras.
-3. K8s pai deploy karne ke bare mai sochna.
-4. SSH the logs server.
+3. SSH the logs server.
+    3.1. Implement SSH for container.
+    3.2. Do SCP or file transfere to check if it is working or not.
+    3.3. Once SS is done, try to run a script inside it (even simple file change could do the work).
+4. K8s pai deploy karne ke bare mai sochna.
+5. Celery parallel task execution.
+6. Binary format data transfere instead of normal json fomrat.
+7. 
