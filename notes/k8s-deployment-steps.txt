@@ -1,0 +1,2 @@
+1. Implement docker images and load it into kind (k8s in docker).
+2. 

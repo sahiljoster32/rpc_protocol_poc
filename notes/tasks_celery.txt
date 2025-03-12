@@ -13,4 +13,5 @@
 4. K8s pai deploy karne ke bare mai sochna.
 5. Celery parallel task execution.
 6. Binary format data transfere instead of normal json fomrat.
-7. 
+7. supervisord.confg node also make so that we know, which node is down ?!
+****************
