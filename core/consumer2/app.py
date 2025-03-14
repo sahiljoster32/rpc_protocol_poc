@@ -2,8 +2,8 @@ from celery import Celery
 
 consumer2 = Celery(
     'consumer2',
-    broker='redis://redis:6379/0',
-    backend='redis://redis:6379/0',
+    broker='redis://redis-svc:6379/0',
+    backend='redis://redis-svc:6379/0',
 )
 
 consumer2.conf.update(

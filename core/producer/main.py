@@ -7,7 +7,7 @@ import sys
 app = Flask(__name__)
 producer = Celery(
     'producer',
-    broker='redis://redis:6379/0'
+    broker='redis://redis-svc:6379/0'
 )
 producer.conf.task_routes = {
     'tasks.add': {'queue': 'addQueue'},

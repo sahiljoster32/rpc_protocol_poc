@@ -1,35 +1,39 @@
 services:
-  redis:
+  redis-svc:
+    image: redis-broker-img:latest
     build:
       context: ./redis
       dockerfile: Dockerfile.redis.broker
     ports:
       - "6379:6379"
-  consumer1:
+  consumer1-svc:
+    image: consumer1-img:latest
     build:
       context: ./consumer1
       dockerfile: Dockerfile.consumer1
     volumes:
       - ./logs:/consumer1/logs
     depends_on:
-      - redis
-  consumer2:
+      - redis-svc
+  consumer2-svc:
+    image: consumer2-img:latest
     build:
       context: ./consumer2
       dockerfile: Dockerfile.consumer2
     volumes:
       - ./logs:/consumer2/logs
     depends_on:
-      - redis
-  producer:
+      - redis-svc
+  producer-svc:
+    image: producer-img:latest
     build:
       context: ./producer
       dockerfile: Dockerfile.producer
     volumes:
       - ./logs:/producer/logs
     depends_on:
-      - redis
-      - consumer1
-      - consumer2
+      - redis-svc
+      - consumer1-svc
+      - consumer2-svc
     ports:
       - "8080:8080"
