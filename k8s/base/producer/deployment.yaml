@@ -20,3 +20,10 @@ spec:
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
+          volumeMounts:
+          - mountPath: "/producer/logs"
+            name: logs-storage
+      volumes:
+        - name: logs-storage
+          persistentVolumeClaim:
+            claimName: logs-pvc

@@ -18,3 +18,10 @@ spec:
         - name: consumer1-container
           image: consumer1-img
           imagePullPolicy: Always
+          volumeMounts:
+          - mountPath: "/consumer1/logs"
+            name: logs-storage
+      volumes:
+        - name: logs-storage
+          persistentVolumeClaim:
+            claimName: logs-pvc

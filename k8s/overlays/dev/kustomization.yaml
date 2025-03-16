@@ -1,4 +1,5 @@
 resources:
+  - ../../base/volumes
   - ../../base/redis
   - ../../base/producer
   - ../../base/consumer1
