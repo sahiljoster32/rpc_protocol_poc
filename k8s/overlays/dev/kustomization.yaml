@@ -4,3 +4,4 @@ resources:
   - ../../base/producer
   - ../../base/consumer1
   - ../../base/consumer2
+  - ../../base/ingress

@@ -11,6 +11,8 @@
     3.1. deployed on k8s cluster using deployments and services & replicasets & selectors objects.
     3.2. Implement ingress for accessing the whole app from external. -- currently only accessing from inside because no nodeport is defined.
     3.3. Implement the pv volume and pvc for storing all logs in single place.
+5. Ingress implementation.
+    5.1. for accessing app.
 4. SSH the logs server.
     4.1. Implement SSH for container.
     4.2. Do SCP or file transfere to check if it is working or not.
@@ -18,4 +20,5 @@
 5. Celery parallel task execution.
 6. Binary format data transfere instead of normal json fomrat.
 7. supervisord.confg node also make so that we know, which node is down ?!
+8. config domain & secrets.
 ****************
