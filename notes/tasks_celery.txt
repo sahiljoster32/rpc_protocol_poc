@@ -21,4 +21,5 @@
 6. Binary format data transfere instead of normal json fomrat.
 7. supervisord.confg node also make so that we know, which node is down ?!
 8. config domain & secrets.
+9. Auto scaling based on queue size. using prometheus + prometheus adapter.
 ****************
